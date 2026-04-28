@@ -1,7 +1,7 @@
 /**
  * @type {import('@react-native-community/cli-types').UserDependencyConfig}
  */
-module.exports = {
+export default {
   dependency: {
     platforms: {
       android: {

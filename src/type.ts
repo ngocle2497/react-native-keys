@@ -15,4 +15,3 @@ export type KeyTurboSecuredType = {
   GOOGLE_API: string;
   BRANCH_API: string;
 };
-
