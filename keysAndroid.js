@@ -7,11 +7,11 @@ const {
   encrypt,
   genTSType,
   CPP_DIRECTORY_PATH,
-} = require('./src/util/common');
-const { generateHeaderFile } = require('./src/util/generate-header');
+} = require("./src/util/common");
+const { generateHeaderFile } = require("./src/util/generate-header");
 const {
   makeCryptographicModuleTemplateAndroid,
-} = require('./src/util/keysFilesTemplateAndroid');
+} = require("./src/util/keysFilesTemplateAndroid");
 
 const makeAndroidJnuFiles = () => {
   const KEYS_FILE_NAME = getAndroidEnvironmentFile();
@@ -27,10 +27,10 @@ const makeAndroidJnuFiles = () => {
     makeCryptographicModuleTemplateAndroid(halfKey);
   const isDoneAddedPrivateKey = makeFileInAndroidMainAssetsFolder(
     cryptographicModuleFileContent,
-    'PrivateKey.java',
+    "PrivateKey.kt"
   );
   genTSType(allKeys);
-  console.info('react-native-keys', {
+  console.info("react-native-keys", {
     isDoneAddedPrivateKey,
   });
 };
